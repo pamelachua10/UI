@@ -1,0 +1,325 @@
+html{
+	height:100%;
+	margin:0;
+	padding:0;
+}
+
+body{
+	background-color:#B0D2FF;
+	/*text-align: center;*/
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+/*for foods*/
+#container{		
+	margin-top: -10px;
+	height: 660px;
+	width: 1000px;
+	background-color:#5C65FF;
+	overflow: hidden;
+	min-height:100%;
+}
+
+#all {
+	position:relative;
+	width: 1000px;
+	margin:auto;
+	text-align: center; /*no need*/
+}
+
+/* --------------------------- START OF CODES FOR HEADER <div>s --------------------------- */
+
+#header{
+	/*display:block;
+	position: fixed;
+	width: 1000px;
+	height: 200px;
+	background-color: #91C0FF;
+	overflow: hide;
+	top:0px; */
+	position:fixed; /*absolute*/
+	margin: auto;
+	width:1000px;
+	z-index:2; /*added*/
+	top:0px; 
+	left:0px; 
+	height:150px; 
+	right:0px;
+	overflow:hidden;
+	background-color: #70A9FF;
+}
+
+#leftheader{
+	float:left;
+	text-align:left;
+	font-size:20px;
+	width:70%;
+	background-color:#70A9FF;
+	height:150px; 
+
+}
+
+#leftheader > img{
+	height:100px;
+	width:100px;
+}
+
+#logo{
+	/*display:table;
+	margin:0 auto;*/
+	margin-top:-70px;
+	margin-left:190px;
+	width: 250px;
+	height:130px;
+}
+
+#rightheader{
+	float:right;
+	margin:auto;
+	text-align:left;
+	width:30%;
+	background-color:#70A9FF;
+	height:150px; 
+
+}
+
+#rightheader img{
+	height:60px;
+	width:60px;
+}
+
+/* --------------------------- END OF CODES FOR HEADER <div>s --------------------------- */
+
+/* --------------------------- START OF CODES FOR MAIN <div>s --------------------------- */
+
+#content {
+	/*position:relative;
+	min-height:100%;*/
+    
+    /*margin: 0 auto;*/	
+    /*padding: 60px 0;
+	
+	background-color:red;
+	margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 100px;
+    margin-top: 50px;
+    overflow: auto;*/
+	margin: 0px auto;
+	position:relative; 
+	top:10px; bottom:60px; 
+	left:0px; right:0px; 
+	overflow: hidden;
+    background-color: #5C65FF;
+}
+
+.btn{
+	height:20px;
+	width:100px;
+	margin-top:-50px;
+}
+
+.btn a{
+	color:black;
+}
+
+/* --------------------------- END OF CODES FOR MAIN <div>s --------------------------- */
+
+/* --------------------------- END OF CODES FOR FOOTER <div>s --------------------------- */
+
+#footer {
+	/*border-top: 3px solid #fff;*/
+	/*display:block;
+	position: fixed;
+	width: 1000px;
+	height: 50px;
+	clear: both;
+	background-color: #91C0FF;
+	bottom: 0px;
+	overflow: hide;*/
+	width: 1000px;
+	height: 50px;
+	margin: auto;
+	background-color: #70A9FF;
+	position:absolute; 
+	bottom:0px; height:60px; 
+	left:0px; right:0px; 
+	overflow:hidden;
+	
+	z-index: 2;
+}
+
+#footer > h6 {
+	position: relative;
+	text-align: center;
+	margin-top: 0px;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	color: #fff;
+}
+
+#twitter,#fb,#google{
+	margin-top: 10px;
+	margin-left: -400px;
+	height: 35px;
+	position: absolute;
+	display: inline-block;
+	z-index:3px;
+}
+
+a{
+	text-decoration: none;
+	color:yellow;
+}
+
+/* --------------------------- END OF CODES FOR MAIN <div>s --------------------------- */
+
+
+
+
+/* ------------------- START OF CODES FOR RESPONSIVE DROP-DOWN MENU ------------------- */
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,300);
+#cssmenu {
+  position: relative;
+  width: 1000px;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, Sans-Serif;
+  font-size: 10px;
+  line-height: 15px;
+  text-transform: uppercase;
+  text-align: left;
+  margin-top: 155px;
+  z-index: 1;
+}
+#cssmenu > ul {
+  width: auto;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  background: #369;
+  /*border: 0px solid #ece6e8;*/
+  border-top: 3px solid #fff;
+  border-bottom: 3px solid #fff;
+  /*-webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;*/
+}
+#cssmenu > ul li#responsive-tab {
+  display: none;
+  /* Hide for large screens */
+
+}
+#cssmenu > ul li {
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+}
+#cssmenu > ul li.right {
+  float: right;
+}
+#cssmenu > ul li.has-sub {
+  position: relative;
+}
+#cssmenu > ul li.has-sub:hover ul {
+  display: block;
+}
+#cssmenu > ul li.has-sub ul {
+  display: none;
+  width: 180px;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  background: #369;
+  border: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  border-top: 0 none;
+}
+#cssmenu > ul li.has-sub ul li {
+  display: block;
+}
+#cssmenu > ul li.has-sub > a {
+  background-image: url('images/caret.png');
+  background-repeat: no-repeat;
+  background-position: 90% -95%;
+}
+#cssmenu > ul li.has-sub > a.active,
+#cssmenu > ul li.has-sub > a:hover {
+  background: #fff url('images/caret.png') no-repeat;
+  background-position: 90% 195%;
+}
+#cssmenu > ul li a {
+  display: block;
+  padding: 12px 24px 11px 24px;
+  text-decoration: none;
+  color: #fff;
+  text-shadow: 0px 1px 0px #000;
+}
+#cssmenu > ul li a.active,
+#cssmenu > ul li a:hover {
+  background: #fff;
+  color: #369;
+  text-shadow: 0px 1px 0px #ccc;
+}
+@media (max-width: 600px) {
+  #cssmenu > ul {
+	  width: 100%;
+  }
+  #cssmenu > ul li#responsive-tab {
+    display: block;
+  }
+  #cssmenu > ul li#responsive-tab a {
+    background: url('images/menu.png') no-repeat;
+    background-position: 95% -35%;
+  }
+  #cssmenu > ul li#responsive-tab a:hover {
+    background-color: white;
+    background-position: 95% 135%;
+  }
+  #cssmenu > ul li {
+    display: none;
+  }
+  #cssmenu > ul li.right {
+    float: none;
+  }
+  #cssmenu > ul li.has-sub {
+    position: relative;
+  }
+  #cssmenu > ul li.has-sub ul {
+    display: block;
+    position: static;
+    width: 100%;
+    background: #369;
+    border: 0 none;
+  }
+  #cssmenu > ul li.has-sub ul li {
+    display: block !important;
+  }
+  #cssmenu > ul li.has-sub ul li a span {
+    display: block;
+    padding-left: 24px;
+  }
+  #cssmenu > ul li.has-sub > a {
+    background-image: none;
+  }
+
+  #cssmenu > ul li.welcome {
+	  margin-left: 0px;
+	  width: 100%;
+	  text-align: left;
+  }
+
+}
+/* Make sure they show even if hidden in mobile view by JS */
+@media (min-width: 600px) {
+  #cssmenu > ul > li.collapsed {
+    display: inline-block !important;
+    *display: inline;
+    zoom: 1;
+  }
+  #cssmenu > ul ul li.collapsed {
+    display: block !important;
+  }
+  
+}
+
+/* -------------------- END OF CODES FOR RESPONSIVE DROP-DOWN MENU -------------------- */
