@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang=''>
+<head>
+   <meta charset='utf-8'>
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link type="text/css" rel="stylesheet" href="../css/styles.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+   <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+   <script src="jquery-latest.min.js" type="text/javascript"></script>
+   <script src="../js/script.js"></script>
+   <script src="../js/slideShow.js"></script>
+   
+   <title>Straight Ahead</title>
+</head>
+<body>
+<div id='all'>
+<!-- HEADER -->
+	<div id='containerCheckout'>
+		<div id='header'>
+				<div id='leftheader'>
+						
+						<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Philippine Local Time</p>
+						<!--insert philippine local time white && SCRIPTS PART-->
+						
+						<!--SCRIPT FOR REQUIRED FIELD-->
+						<script type="text/javascript">
+							$(document).ready(function() {
+							   $("#myButton").click(function() {
+								   $("#myForm").submit();
+							   });
+							});
+						</script>
+						
+						<script type="text/javascript" >  
+						function validateForm() {
+							var x1 = document.forms["checkoutform"]["fname"].value;
+							var x2 = document.forms["checkoutform"]["lname"].value;
+							var x3 = document.forms["checkoutform"]["email"].value;
+							var x4 = document.forms["checkoutform"]["unitnum"].value;
+							var x5 = document.forms["checkoutform"]["street"].value;
+							var x6 = document.forms["checkoutform"]["city"].value;
+							var x7 = document.forms["checkoutform"]["cn"].value;
+							var x8 = document.forms["checkoutform"]["city2"].value;
+							
+							if (x1 == null || x1 == "") {
+								alert("First name must be filled out");
+								return false;
+							}
+							if (x2 == null || x2 == "") {
+								alert("Last name must be filled out");
+								return false;
+							}
+							if (x3 == null || x3 == "") {
+								alert("E-mail must be filled out");
+								return false;
+							}
+							if (x4 == null || x4 == "") {
+								alert("Unit#/Floor/House# must be filled out");
+								return false;
+							}
+							if (isNaN(x4)) {
+								alert("Unit#/Floor/House# must be a number");
+								return false;
+							}
+							if (x5 == null || x5 == "") {
+								alert("Street must be filled out");
+								return false;
+							}
+							if (x6 == null || x6 == "") {
+								alert("City must be filled out");
+								return false;
+							}
+							if (x7 == null || x7 == "") {
+								alert("Contact number must be filled out");
+								return false;
+							}
+							if (isNaN(x7)) {
+								alert("Contact number must be a number");
+								return false;
+							}
+							if (x8 == "select") {
+								alert("Please select a delivery address");
+								return false;
+							}
+								
+							{  
+							var x=document.checkoutform.email.value;  
+							var atposition=x.indexOf("@");  
+							var dotposition=x.lastIndexOf(".");  
+							if (atposition<1 || dotposition<atposition+2 || dotposition+2>=x.length){  
+							  alert("Please enter a valid e-mail address");  
+							  return false;  
+							  }  
+							}  
+							}
+							function validateemail()  
+							{  
+							var x=document.checkoutform.email.value;  
+							var atposition=x.indexOf("@");  
+							var dotposition=x.lastIndexOf(".");  
+							if (atposition<1 || dotposition<atposition+2 || dotposition+2>=x.length){  
+							  alert("Please enter a valid e-mail address \n atpostion:"+atposition+"\n dotposition:"+dotposition);  
+							  return false;  
+							  }  
+							}  
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						// SCRIPT FOR PAYMENT //
+						
+						function showcommentform() {  
+						var data="&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp *Comments, Special Instructions, Change Needed, etc.<br> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <textarea rows='5' cols='40'></textarea>";  
+						document.getElementById('mylocation1').innerHTML=data;  
+						}  
+						function hidecommentform() {  
+						var data="";  
+						document.getElementById('mylocation1').innerHTML=data;  
+						}  
+						function showinstructions() {  
+						//var data="&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp You will be redirected to Pesopay's secure payment gateway to enter your credit card information. <br> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<b>Note: </b><br> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 1. There is a Php 2,000.00 limit per transaction.<br> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 2. Philippine-issued credit card from orders within the Philippines only.";  
+						var data="<ul><ul>You will be redirected to Pesopay's secure payment gateway to enter your credit card information.</ul><ul><br><b>Note: </b></ul> <br> <ul> 1. There is a Php 2,000.00 limit per transaction.</ul> <br> <ul>2. Philippine-issued credit card from orders within the Philippines only.</ul></ul>";  
+						document.getElementById('mylocation2').innerHTML=data;  
+						}  
+						function hideinstructions() {  
+						var data="";  
+						document.getElementById('mylocation2').innerHTML=data;  
+						} 
+						</script> 
+						
+						
+						<script src="http://24timezones.com/js/swfobject.js" language="javascript"></script>
+						<script src="http://24timezones.com/timescript/maindata.js.php?city=1926731" language="javascript"></script>
+						<table><tr><td><div id="flash_container_tt552a2fe7e9595"></div><script type="text/javascript">
+							var flashMap = new SWFObject("http://24timezones.com/timescript/clock_digit_12.swf", "main", "250", "70", "7.0.22", "#FFFFFF", true)
+							flashMap.addParam("movie",      "http://24timezones.com/timescript/clock_digit_12.swf");
+							flashMap.addParam("quality",    "high");
+							flashMap.addParam("wmode",      "transparent");
+							flashMap.addParam("flashvars",  "color=000066&logo=1&city=1926731");
+							flashMap.write("flash_container_tt552a2fe7e9595");
+						</script></td></tr><tr><td style="text-align: center; font-weight: bold">
+						<a href="http://24timezones.com/world_directory/manila_local_time.php" target="_blank" title="local time Manila" style="text-decoration: none">			</a>
+						</td></tr></table>
+						
+						<!--End for local time code-->
+						
+					<div id='logo'>
+						<a href='index.html'>
+							<img id='logo' src="../img/logo.png">
+						</a>
+					</div>
+				</div>
+				<div id='rightheader'>
+				
+				<table cellspacing="20">
+					<tr>
+					<td><img src="../img/contact.png"></td>
+					<td><img src="../img/about.png"></td>
+					<td><img src="../img/locator.png"></td>
+					</tr>
+				
+					<tr>
+					<td><a href='contacts.html'>Contact Us</a></td>
+					<td><a href='about.html'>About Us</a></td>
+					<td><a href='locator.html'>Locator</a></td>
+					</tr>
+				</table>
+				</div>
+		</div>
+<!-- MAIN CONTENT -->
+	<div id='content'>
+		<div id='checkout'>
+		<br>
+			CHECKOUT
+		</div>
+		<div id='leftCheckout'>
+			<h3>Customer Address</h3>
+			<h4>
+				<form method="get" name = "checkoutform" action="ty.html" id="myForm" onsubmit="return validateForm()"> <!--no alert yet-->
+				
+				
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp
+				*First Name:<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
+				<input type="text" name="fname" size="35">
+				<br><br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp
+				M.I.:<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
+				<input type="text" name="mname" size="35">
+				<br><br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp
+				*Last Name:	<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
+				<input type="text" name="lname" size="35">
+				<br><br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp
+				Company:<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
+				<input type="text" name="company" size="35">
+				<br><br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp
+				*E-mail:<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
+				<input type="text" name="email" size="35">
+				<br><br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp
+				*Unit#/Floor/House#:<br>	
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
+				<input type="text" name="unitnum" size="35">
+				<br><br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp
+				*Street:<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
+				<input type="text" name="street" size="35">
+				<br><br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp
+				*City:<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
+				<input type="text" name="city" size="35">
+				<br><br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp
+				*Contact Number:<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
+				<input type="text" name="cn" size="35">
+				<input type="submit" style="display:none" />
+				<br><br>
+			</h4>
+			<h3>Delivery Address</h3>
+			<h4>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp
+				*City:
+					<select name="city2" style="width:250px">
+						<option value="select">Select City</option>
+						<option value="manila">Manila</option>
+						<option value="makati">Makati</option>
+						<option value="pasay">Pasay</option>
+						<option value="pasig">Pasig</option>
+						<option value="quezon">Quezon</option>
+						<option value="san juan">San Juan</option>
+						
+					</select>
+				<br><br>
+			</form>
+			</h4>
+			<h3>Payment Information</h3>
+			<h4>
+			<!--
+			<form action="">
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp
+				<input type="radio" name="payment" value="cash">Cash<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					*Comments, Special Instructions, Change Needed, etc.<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp
+					<textarea rows="5" cols="40"></textarea>
+					<br><br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp
+				<input type="radio" name="payment" value="credit card">Credit Card
+			</form>
+			-->
+			<form name="myCommentForm" action="">
+				&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+				<input type="radio" name="payment" value="cash" onclick="showcommentform();hideinstructions();">Cash<br>
+				&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+				<input type="radio" name="payment" value="credit card" onclick="showinstructions();hidecommentform();">Credit Card
+				<div id="mylocation1"></div> 
+				<div id="mylocation2"></div> 
+			</form>
+			
+			
+			
+			</h4>
+			<h3>Date/Time for Pre-order</h3>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp
+			<input type="text" name="street" size="45">
+		</div>
+		<div id='rightCheckout'>
+			<!--insert here summary of payment form-->
+			<br>
+			<h3>Order Review</h3>
+			<div id='review'>
+				<table cellspacing="20">
+				<!--REVIEW PRODUCTS-->
+					<tr>
+					<td>Product Name</td>
+					<td>Quantity</td>
+					<td>Subtotal</td>
+					</tr>
+				</table>
+				<br><br><br><br><br><br><br><br><br><br><br>
+				<table cellspacing="20">
+				<!--REVIEW TOTAL-->
+					<tr>
+					<td>Grand Total:</td>
+					<td>Php</td>				<!--DBMS-->
+					</tr>
+				</table>
+			</div>
+<!-- BUTTON-->
+		<div id='buttonCheckout'>
+			<button type="button" class="btn"><a href='index.html'>Add Item</a></button>
+			<input type="button" value="Place Order" id="myButton" class = "btn"/>
+		</div>
+		
+		</div>
+	</div>
+<!-- FOOTER -->
+	<div id='footer'>
+	
+		<a href="https://twitter.com/StraightAhead" target="_blank">
+			<img id='twitter' src="../img/twitter.png">
+		</a>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="https://www.facebook.com/pages/Straight-Ahead-Fast-Food-Restaurant/263002413746360" target="_blank">
+			<img id='fb' src="../img/fb.png">
+		</a>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="https://www.com.google/pages/StraghtAhead/263002413746360" target="_blank">
+			<img id='google' src="../img/google.png">
+		</a>
+		<h6>&copy;2015 Straight Ahead (Chua, Pamela; Santiago, Christian). All Rights Reserved <br> USTIICS | 2CSB</h6>
+		
+		
+	</div>
+</div><!--end of container-->
+</div><!--end of all-->
+</body>
+
+</html>
